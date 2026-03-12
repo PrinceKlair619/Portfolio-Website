@@ -1,120 +1,153 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
+import './App.css'
+
+const projects = [
+  {
+    title: 'Pupperazzi',
+    type: 'Full Stack Web App',
+    description:
+      'A dog matching platform with profiles, social features, and a polished user experience built for real interaction.',
+  },
+  {
+    title: 'Cats of the Cattibean',
+    type: 'Unreal Engine Game',
+    description:
+      'A stylized adventure game with exploration, fishing, custom environments, and interactive gameplay systems.',
+  },
+  {
+    title: 'Buffalo Crime Analyzer',
+    type: 'Data Visualization Project',
+    description:
+      'An interactive project focused on exploring crime trends through filtering, analysis, and visual presentation.',
+  },
+]
+
+const skills = [
+  'Python',
+  'Java',
+  'C',
+  'C++',
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'Node.js',
+  'PHP',
+  'MySQL',
+  'Git',
+  'GitHub',
+  'Unreal Engine 5',
+]
+
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="page">
+      <nav className="navbar">
+        <div className="nav-logo">Prince Klair</div>
+        <div className="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+      </nav>
+
+      <section className="hero-section">
+        <div className="hero-text">
+          <p className="tag">Software Engineer • Full Stack Developer</p>
+          <h1>Hi, I’m Prince. I build software that looks clean and works well.</h1>
+          <p className="hero-description">
+            I’m a Computer Science student at the University at Buffalo with experience in
+            full stack development, systems programming, data focused projects, and game development.
+            I like building projects that feel polished, practical, and real.
           </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+          <div className="hero-buttons">
+            <a href="#projects" className="btn primary-btn">View Projects</a>
+            <a
+              href="https://github.com/PrinceKlair619"
+              target="_blank"
+              rel="noreferrer"
+              className="btn secondary-btn"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/prince-k1"
+              target="_blank"
+              rel="noreferrer"
+              className="btn secondary-btn"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
+
+        <div className="hero-card">
+          <h2>Quick Snapshot</h2>
+          <p>CS student focused on building strong real world projects.</p>
           <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
+            <li>Full stack web development</li>
+            <li>Systems and networking work</li>
+            <li>Game development in Unreal Engine 5</li>
+            <li>Strong team leadership and project ownership</li>
           </ul>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <section id="about" className="section">
+        <h2>About Me</h2>
+        <p>
+          I enjoy building software that combines solid engineering with a smooth user experience.
+          My work has included web apps, backend systems, data projects, and game features. I care about
+          making things feel complete, not just functional.
+        </p>
+      </section>
+
+      <section id="projects" className="section">
+        <h2>Projects</h2>
+        <div className="project-grid">
+          {projects.map((project) => (
+            <div className="project-card" key={project.title}>
+              <h3>{project.title}</h3>
+              <p className="project-type">{project.type}</p>
+              <p>{project.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="skills" className="section">
+        <h2>Skills</h2>
+        <div className="skills-list">
+          {skills.map((skill) => (
+            <span className="skill-pill" key={skill}>
+              {skill}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="section contact-section">
+        <h2>Contact</h2>
+        <p>
+          I’m always looking to build more, learn more, and connect with people working on exciting things.
+        </p>
+        <div className="hero-buttons">
+          <a href="mailto:Klairprince619@gmail.com" className="btn primary-btn">
+            Email Me
+          </a>
+          <a
+            href="https://github.com/PrinceKlair619"
+            target="_blank"
+            rel="noreferrer"
+            className="btn secondary-btn"
+          >
+            GitHub
+          </a>
+        </div>
+      </section>
+    </div>
   )
 }
 
